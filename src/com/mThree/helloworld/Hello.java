@@ -8,8 +8,8 @@
 package com.mThree.helloworld;
 public class Hello {
 	public static void main (String[] args) {
-		String address= "263 s 10th st, newark, NJ";
-		String phone = "201-468-3982";
+		String address= "Newark, NJ";
+		String phone = "[CLASSIFIED]";
 		String a = "Who lives at: \t";
 		String b = "And phone number is: \t";
 				
