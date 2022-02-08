@@ -1,0 +1,14 @@
+Please enter window height in feet:
+Please enter window width in feet:
+Please enter the number of windows desired:
+Now, please enter the cost of glass:/n (final cost subject to change)/n (For Estimates only)
+Please enter the cost of trim:/n (final cost subject to change)/n (For Estimates only)
+Is this correct entry? (Y/N?)/t
+Entry confirmed!
+Invalid Entry, please try again.
+Window height =
+Window width =
+Number of Windows =
+Window area =
+Window perimeter =
+Total Cost =
