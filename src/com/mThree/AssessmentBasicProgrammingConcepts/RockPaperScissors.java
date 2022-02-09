@@ -102,7 +102,7 @@ public class RockPaperScissors {
         	
         	
         }
-        catch(Exception e){
+        catch(Exception e){//to befair only exception that could be thrown is null or some how crashing scanner
         	System.out.println("You dare mock me with entering something weird!?\n"
         			+"How dare you!\nI say good to you!");
         	System.exit(0);
@@ -261,6 +261,11 @@ public class RockPaperScissors {
 	
 	/*
 	 * might be able to over load this
+	 * update: overloaded and overrided  -- maybe not cause examples have them in another sub class
+	 * ... i don't remember class and sub level class stuff.
+	 * to be fair I THINK theres a way to condense into 1 method for reuse
+	 * i'm not very skilled in java --> lets think this over
+	 * s
 	 */
 	public static Boolean inputValidation(String inputResponse){
 		Boolean output=null;
@@ -364,4 +369,15 @@ public class RockPaperScissors {
 	}
 	return outputOfWinner;
 }
+
+/*
+ * at this juncture what is left to TODO?
+ * welp we can stylize, cause gui >no gui
+ * we can consolidate and clean up code 
+ * (originally i was planning to make a validation class and exception, but that's bad coding for java apparently)
+ * i'm not sure... i was gunna say a method to do the validation retries or inputs...
+ * but is there a point to doing that?
+ * theres also tons of varriables eating memory , could consolidate and resuse
+ * 
+ */
 }
