@@ -42,6 +42,7 @@ Scanner inputReader = new Scanner(System.in);
             	
             }}while(sentinal);
 	 System.out.println(x +"+"+ y +"+"+ z + "="+(x+y+z));
+	 inputReader.close();
 	 
 	 
 }

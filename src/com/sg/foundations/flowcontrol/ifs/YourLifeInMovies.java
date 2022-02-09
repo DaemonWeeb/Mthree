@@ -6,7 +6,8 @@ public class YourLifeInMovies {
 	public static void main(String[] args) {
         Scanner inputReader = new Scanner(System.in);
         
-        final int x= 2006;
+        @SuppressWarnings("unused")
+		final int x= 2006;
         int y= 0;
         int i=0;
         String nom;
@@ -76,6 +77,6 @@ public class YourLifeInMovies {
         	}}
         }
         
-        
+     inputReader.close();   
         
 	}}

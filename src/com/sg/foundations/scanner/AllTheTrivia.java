@@ -23,6 +23,6 @@ public class AllTheTrivia {
 		 System.out.println(answers.get(rand.nextInt(upperBound))+" is the oldest structure on earth!");
 		 System.out.println(answers.get(rand.nextInt(upperBound))+" is the President of the Us!");
 		 
-	 }
+		 inputReader.close();}
 		 
 }

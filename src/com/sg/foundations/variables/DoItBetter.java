@@ -52,6 +52,6 @@ public class DoItBetter {
     	 sentinal=true;
     	
     }}while(sentinal);
-    System.out.println("Oh yeah?! Well I know "+ (++z)+" languages!");
+    System.out.println("Oh yeah?! Well I know "+ (++z)+" languages!");inputReader.close();
     	
 }}

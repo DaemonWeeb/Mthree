@@ -72,7 +72,7 @@ public class WindowMaster {
 	     **/
 		
 		ArrayList<String> inputs= new 	ArrayList<String>();
-		ArrayList<Float> numbers= new ArrayList<Float>();
+		
 	    
 	    
 	    //Initialize scanner
@@ -282,7 +282,7 @@ public class WindowMaster {
 	    System.out.println(lines.get(12)+ perimeterOfWindow);
 	    System.out.println(lines.get(13) + cost);
 	    //results in an error due to build path for text
-	}
+	    myScanner.close();}
 	}
 	
 

@@ -56,6 +56,7 @@ public class PassingTheTuringTest {
         System.out.println(x+"? I see... Mine is "+favoriteNumber+"...");
         System.out.println("Well if you add "+ x +" + "+favoriteNumber+" you get "+ (x+favoriteNumber) +".");
         System.out.println("That must hold some luck, no?");
+        inputReader.close();
         
     }
 }

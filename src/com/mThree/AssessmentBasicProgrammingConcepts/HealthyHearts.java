@@ -1,4 +1,4 @@
-package com.sg.foundations.variables;
+package com.mThree.AssessmentBasicProgrammingConcepts;
 
 import java.util.Scanner;
 

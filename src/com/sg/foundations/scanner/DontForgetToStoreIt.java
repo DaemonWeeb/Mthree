@@ -55,5 +55,6 @@ public class DontForgetToStoreIt {
 	         * -- but otherwise it remains as is for the throw away assingment
 	         * 
 	         */
+	        inputReader.close();
 }}
 

@@ -39,5 +39,5 @@ public class QuestForTheUserInput {
 	        System.out.println("How do you know " + velocityOfSwallow + " is correct, " + yourName + "?");
 	        System.out.println("You didn't even know if the swallow was African or European!");
 	        System.out.println("Maybe skip answering things about birds and instead go " + yourQuest + ".");
-	    }
+	        inputReader.close();}
 }

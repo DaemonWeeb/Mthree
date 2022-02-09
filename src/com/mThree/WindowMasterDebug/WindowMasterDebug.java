@@ -44,6 +44,6 @@ public class WindowMasterDebug {
 	    System.out.println("Window area = " + areaOfWindow);
 	    System.out.println("Window perimeter = " + perimeterOfWindow);
 	    System.out.println("Total Cost = " + cost);
-	}
+	    sc.close();}
 
 }

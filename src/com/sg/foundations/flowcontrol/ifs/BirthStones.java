@@ -6,7 +6,7 @@ public class BirthStones {
 	public static void main(String[] args) {
         Scanner inputReader = new Scanner(System.in);
         
-        int x= 0;
+     
         int y= 0;
        
         String month = null, stone = null;
@@ -89,7 +89,7 @@ public class BirthStones {
         	break;
         	
         }
-        System.out.println(month+"\'s birthstone is "+stone+".");
+        System.out.println(month+"\'s birthstone is "+stone+".");inputReader.close();
 	}
 
 }

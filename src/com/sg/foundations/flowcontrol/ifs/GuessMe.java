@@ -47,5 +47,5 @@ public class GuessMe {
         	
         }
         
-        
+        inputReader.close();
 	}}

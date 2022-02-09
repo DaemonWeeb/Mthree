@@ -1,6 +1,6 @@
 package com.sg.foundations.variables;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -40,5 +40,5 @@ public class MiniMadLibs {
 	+inputs.get(5)+ " " +inputs.get(6)+", to seek out "+inputs.get(5)+" "+inputs.get(7) 
 	+" and "+inputs.get(5)
 	+" " +inputs.get(8)+ ", to boldly "+inputs.get(9)+" where no one has "+inputs.get(10)+" before.");
-	
+	inputReader.close();
 }}
