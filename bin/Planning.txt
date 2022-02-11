@@ -1,0 +1,65 @@
+we have collections and user adding
+allow the user to remove
+allow user toe edit
+allow user to list
+allow user toe display the info
+allow hte user toe search
+load the dvd library from an external file
+save dvd library back to external file 
+allow user to do as many dvd commands as they wish -->so this one we need todo
+
+mvc design pattern and use dependency injection (??)
+process outlined in agile
+dvd data transfer object should have fields: 
+title, release date, mpaa rating, director's name, studio, and user rating or note (text box/comment)
+
+also need to do a flow chart
+
+multiple packages? (listed like 3)
+	actually 4! plus an app to dependency injection 
+	they are :
+	the controller--> the driver of the entire app
+	the DAO--> data access objects
+	the DTO--> data transfer objects
+	The uI--> the part that takes inputs and outputs
+
+multiple classes... and i already know i'm going to need a validation class 
+	which i don't think the code along NOR others online created if they followed the 
+	code along. so While i've made apps before, they're "standardization" for stuff is novel to me.
+	so where would a validation class be???
+	it checks users code... and all things passed from the user TO the computer isn't that a DAO
+	looking over code for the code along... doesn't seem that a validations is necessary. all the info is text
+	so what can I add to it that would need a validation?
+	lets skip this for now and get back to it [TODO]
+		totally unnecessary the class roster stuff has built in validations. 
+
+so classes for the most part will be just like the class roster code along
+lets set them up except rename to DVDLIBRARY styling
+one thing that is different is the classes in the DTO
+cause in student roaster is "student" 
+but in dvd library its 2 objects
+dvd's 
+and the library itself
+other than that its the same
+	library is unused... even tho it should be. *shrug* 
+	at start i knew i needed the object DVD and library. but library not used at all.
+	
+
+okay now the classes named... lets follow along the code along and then come back here (see ya soon).
+So been following class roaster whole time everything is essentially done.
+
+theres 3 things looking at choles code that she does... and does well if it does what i think it does-- but i commented it out and it doesnt. so i don't get why its there
+
+BUT
+theres much that needs improve like it checks case and spelling must match. 
+these are things that in apex i'd do simply by query language. so here its kinda  chore. Alot of this is inefficent and a chore.
+
+this project honest is silly... after doing salesforce for years i'm like "why would i do this?" in salesforce i'd make custom object DVD__c
+and then setup a screen flow if its just internal or for customers. 
+if its more for app development then LWC. if it needs to be ultra complex with huge queries and be able to search all movies in existence 
+and is for facebook... then yeah... little bigger in scope XD
+But this i get its teaching OOP encapsulation and inheritance and what not. actually i see where this is useful. linux! we do so much via command promt. if this was implemented (which it is sometimes)
+it'd be so much easier. 
+
+
+
