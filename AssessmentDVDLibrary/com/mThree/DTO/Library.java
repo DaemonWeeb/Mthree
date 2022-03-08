@@ -10,23 +10,19 @@
 package com.mThree.DTO;
 
 public class Library {
-	
-	//real quick copy the stuff from the DVD
-	/* //first properties of the library? 
-	private String name;//not doing nom this time cause i know i'm going ot use name instead of nom
-	private DVD dvd;//here the dvd is lowercase cause i know that will cause issues
-	
-	//getters cause the name is non-changing and the DVD name is not changing in the collection
-	public Library(String name) {
-        this.name = name;
-    }
-	
-	public DVD getDvd() {
-        return dvd;
-    }
-	
-	public String getName() {
-        return name;
-    } */
-	
+
+	// real quick copy the stuff from the DVD
+	/*
+	 * //first properties of the library? private String name;//not doing nom this
+	 * time cause i know i'm going ot use name instead of nom private DVD dvd;//here
+	 * the dvd is lowercase cause i know that will cause issues
+	 * 
+	 * //getters cause the name is non-changing and the DVD name is not changing in
+	 * the collection public Library(String name) { this.name = name; }
+	 * 
+	 * public DVD getDvd() { return dvd; }
+	 * 
+	 * public String getName() { return name; }
+	 */
+
 }

@@ -20,12 +20,13 @@ package com.mThree.DAO;
  * i'm little confused to why it exists other than passing messages when an exception hits
  * 
  */
-@SuppressWarnings("serial")//dunno anything about this legit new to me
+@SuppressWarnings("serial") // dunno anything about this legit new to me
 public class DVDLibraryDAOException extends Exception {
 	public DVDLibraryDAOException(String message) {
 		super(message);
 	}
+
 	public DVDLibraryDAOException(String message, Throwable cause) {
-        super(message, cause);
-    }
+		super(message, cause);
+	}
 }

@@ -58,77 +58,79 @@ public interface DVDLibraryDAO {
 	 * @throws com.mThree.DAO.DVDLibraryDAOException
 	 */
 	DVD getDVD(String title) throws DVDLibraryDAOException;
-	
-	/**
-     * Edits the DVD release date from the library the DVD associated with the given title.
-     * Returns the DVD object that is being edited or null if there is no DVD
-     *  associated with the given title.
-     * @param title title of DVD to be edited
-     * @param releaseDate release date of DVD to be changed to
-     * @return DVD object that was edited or null if no DVD was associated with the 
-     * given DVD title
-     * @throws com.mThree.DAO.DVDLibraryDAOException
-     */
-    DVD changeReleaseDate(String title, LocalDate releaseDate)throws DVDLibraryDAOException;
-    
-    /**
-     * Edits the DVD MPAA rating date from the library the DVD associated with the given title.
-     * Returns the DVD object that is being edited or null if there is no DVD
-     * associated with the given title.
-     * @param title title of DVD to be edited
-     * @param mpaaRating MPAA rating of DVD to be changed to    
-     * @return DVD object that was edited or null if no DVD was associated with the
-     * given DVD title
-     * @throws com.mThree.DAO.DVDLibraryDAOException    
-     */
-    DVD changeMpaaRating(String title, String mpaaRating)throws DVDLibraryDAOException;
-    
-    
-    /**
-     * Edits the DVD MPAA rating date from the library the DVD associated with the given title.
-     * Returns the DVD object that is being edited or null if there is no DVD
-     * associated with the given title.
-     * @param title title of DVD to be edited
-     * @param directorName director name of DVD to be changed to    
-     * @return DVD object that was edited or null if no DVD was associated with the
-     * given DVD title
-     * @throws com.mThree.DAO.DVDLibraryDAOException    
-     */    
-    DVD changeDirectorName(String title, String directorName)throws DVDLibraryDAOException;
-    
-    
-      /**
-     * Edits the DVD MPAA rating date from the library the DVD associated with the given title.
-     * Returns the DVD object that is being edited or null if there is no DVD
-     * associated with the given title.
-     * @param title title of DVD to be edited
-     * @param userRating user rating of DVD to be changed to    
-     * @return DVD object that was edited or null if no DVD was associated with the
-     * given DVD title    
-     * @throws com.mThree.DAO.DVDLibraryDAOException    
-     */     
-    DVD changeUserRating(String title, String userRating)throws DVDLibraryDAOException;
-    
-    
-      /**
-     * Edits the DVD studio name from the library the DVD associated with the given title.
-     * Returns the DVD object that is being edited or null if there is no DVD
-     * associated with the given title.
-     * @param title title of DVD to be edited
-     * @param studioName name of the studio of DVD to be changed to    
-     * @return DVD object that was edited or null if no DVD was associated with the
-     * given DVD title    
-     * @throws com.mThree.DAO.DVDLibraryDAOException    
-     */     
-    DVD changeStudioName(String title, String studioName)throws DVDLibraryDAOException; 
 
-    //for searches getters of maps.
-    Map<String, DVD> getDVDsByYears(int years) throws DVDLibraryDAOException;
-    
-    Map<String, DVD> getDVDsByMpaaRating(String mpaaRating) throws DVDLibraryDAOException;
-    
-    Map<String, DVD> getDVDsByDirector(String directorName) throws DVDLibraryDAOException;
-    
-    Map<String, DVD> getDVDsByStudio(String studioName) throws DVDLibraryDAOException;
-    
+	/**
+	 * Edits the DVD release date from the library the DVD associated with the given
+	 * title. Returns the DVD object that is being edited or null if there is no DVD
+	 * associated with the given title.
+	 * 
+	 * @param title       title of DVD to be edited
+	 * @param releaseDate release date of DVD to be changed to
+	 * @return DVD object that was edited or null if no DVD was associated with the
+	 *         given DVD title
+	 * @throws com.mThree.DAO.DVDLibraryDAOException
+	 */
+	DVD changeReleaseDate(String title, LocalDate releaseDate) throws DVDLibraryDAOException;
+
+	/**
+	 * Edits the DVD MPAA rating date from the library the DVD associated with the
+	 * given title. Returns the DVD object that is being edited or null if there is
+	 * no DVD associated with the given title.
+	 * 
+	 * @param title      title of DVD to be edited
+	 * @param mpaaRating MPAA rating of DVD to be changed to
+	 * @return DVD object that was edited or null if no DVD was associated with the
+	 *         given DVD title
+	 * @throws com.mThree.DAO.DVDLibraryDAOException
+	 */
+	DVD changeMpaaRating(String title, String mpaaRating) throws DVDLibraryDAOException;
+
+	/**
+	 * Edits the DVD MPAA rating date from the library the DVD associated with the
+	 * given title. Returns the DVD object that is being edited or null if there is
+	 * no DVD associated with the given title.
+	 * 
+	 * @param title        title of DVD to be edited
+	 * @param directorName director name of DVD to be changed to
+	 * @return DVD object that was edited or null if no DVD was associated with the
+	 *         given DVD title
+	 * @throws com.mThree.DAO.DVDLibraryDAOException
+	 */
+	DVD changeDirectorName(String title, String directorName) throws DVDLibraryDAOException;
+
+	/**
+	 * Edits the DVD MPAA rating date from the library the DVD associated with the
+	 * given title. Returns the DVD object that is being edited or null if there is
+	 * no DVD associated with the given title.
+	 * 
+	 * @param title      title of DVD to be edited
+	 * @param userRating user rating of DVD to be changed to
+	 * @return DVD object that was edited or null if no DVD was associated with the
+	 *         given DVD title
+	 * @throws com.mThree.DAO.DVDLibraryDAOException
+	 */
+	DVD changeUserRating(String title, String userRating) throws DVDLibraryDAOException;
+
+	/**
+	 * Edits the DVD studio name from the library the DVD associated with the given
+	 * title. Returns the DVD object that is being edited or null if there is no DVD
+	 * associated with the given title.
+	 * 
+	 * @param title      title of DVD to be edited
+	 * @param studioName name of the studio of DVD to be changed to
+	 * @return DVD object that was edited or null if no DVD was associated with the
+	 *         given DVD title
+	 * @throws com.mThree.DAO.DVDLibraryDAOException
+	 */
+	DVD changeStudioName(String title, String studioName) throws DVDLibraryDAOException;
+
+	// for searches getters of maps.
+	Map<String, DVD> getDVDsByYears(int years) throws DVDLibraryDAOException;
+
+	Map<String, DVD> getDVDsByMpaaRating(String mpaaRating) throws DVDLibraryDAOException;
+
+	Map<String, DVD> getDVDsByDirector(String directorName) throws DVDLibraryDAOException;
+
+	Map<String, DVD> getDVDsByStudio(String studioName) throws DVDLibraryDAOException;
+
 }

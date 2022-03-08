@@ -20,15 +20,16 @@ import java.util.Map;
 
 public class DVDLibraryController {
 	// using our UI classes
-	private UserIO io = new UserIOConsoleImpl(); // input/output shennanigans
+
 	private DVDLibraryView view; // menu view shennanigans
 	private DVDLibraryDAO dao;// our DAO shennanigans
 
 	public DVDLibraryController(DVDLibraryDAO dao, DVDLibraryView view) {
-	    this.dao = dao;
-	    this.view = view;
+		this.dao = dao;
+		this.view = view;
 	}
 
+//main menu
 	public void run() {
 		boolean keepGoing = true;
 		int menuSelection = 0;
@@ -83,6 +84,7 @@ public class DVDLibraryController {
 
 	// at the point we made one for the first part of the menu
 	// so lets got do this for all of them
+	// commands for the main menu
 	private void createDVD() throws DVDLibraryDAOException {
 		view.displayCreateDVDBanner();
 		DVD newDVD = view.getNewDVDInfo();
@@ -111,13 +113,14 @@ public class DVDLibraryController {
 	}
 
 	private void exitMessage() {
-		view.displayExitBanner();
+		
 	}
 
 	private void unknownCommand() {
 		view.displayUnknownCommandBanner();
 	}
 
+//edit dvd menu
 	private void editDVD() throws DVDLibraryDAOException {
 		view.displayEditDVDBanner();
 		String title = view.getDVDTitleChoice();
@@ -159,40 +162,42 @@ public class DVDLibraryController {
 			}
 		}
 	}
+	// edit methods that return the title in "" of edited dvd
 
 	private void editReleaseDate(String title) throws DVDLibraryDAOException {
 		view.displayEditReleaseDateBanner();
 		LocalDate newReleaseDate = view.getReleaseDate();
 		DVD editedDVD = dao.changeReleaseDate(title, newReleaseDate);
-		view.displayEditResult();
+		view.displayEditResult(editedDVD.getTitle());
 	}
 
 	private void editMpaaRating(String title) throws DVDLibraryDAOException {
 		// view.displayEditMpaaRatingBanner();
 		String newMpaaRating = view.getMpaaRating();
 		DVD editedDVD = dao.changeMpaaRating(title, newMpaaRating);
-		view.displayEditResult();
+		view.displayEditResult(editedDVD.getTitle());
 	}
 
 	private void editDirectorName(String title) throws DVDLibraryDAOException {
 		// view.displayEditDirectorNameBanner();
 		String newDirectorName = view.getDirectorName();
 		DVD editedDVD = dao.changeDirectorName(title, newDirectorName);
-		view.displayEditResult();
+		view.displayEditResult(editedDVD.getTitle());
 	}
 
 	private void editUserRating(String title) throws DVDLibraryDAOException {
 		String newUserRating = view.getUserRating();
 		DVD editedDVD = dao.changeUserRating(title, newUserRating);
-		view.displayEditResult();
+		view.displayEditResult(editedDVD.getTitle());
 	}
 
 	private void editStudioName(String title) throws DVDLibraryDAOException {
 		String newStudioName = view.getStudioName();
 		DVD editedDVD = dao.changeStudioName(title, newStudioName);
-		view.displayEditResult();
+		view.displayEditResult(editedDVD.getTitle());
 	}
 
+//find dvd menus
 	private void findDVDs() throws DVDLibraryDAOException {
 		view.displayFindDVDsBanner();
 		int findDVDsSelection = 0;
@@ -223,6 +228,7 @@ public class DVDLibraryController {
 		}
 	}
 
+//find dvd methods maps title to other information 
 	private void findMoviesByYears() throws DVDLibraryDAOException {
 		int x = view.getYears();
 		Map<String, DVD> filteredDVDs = dao.getDVDsByYears(x);

@@ -105,11 +105,20 @@ public class UserIOConsoleImpl implements UserIO {
 		 * time i did this i did a bunch of if elses... this is so much cleaner. Sorcery
 		 * i say!
 		 */
+		int attempts=0;
 		int result;
 		do {
 			result = readInt(msgPrompt);
-		} while (result < min || result > max);
-
+			attempts++;
+			//print(String.valueOf(attempts));
+			if(attempts>3) {
+				print("Exceeded allowed attempts! Now Closing.");
+				System.exit(0);
+			}
+			
+		} while (result < min || result > max );
+		
+		
 		return result;
 	}
 
@@ -239,6 +248,7 @@ public class UserIOConsoleImpl implements UserIO {
 		} while (result < min || result > max);
 		return result;
 	}
+
 	/*
 	 * now that the premade stuff that is amazing code is done lets follow the
 	 * school's standard and construct a method for date
@@ -247,8 +257,8 @@ public class UserIOConsoleImpl implements UserIO {
 	/**
 	 *
 	 * A simple method that takes in a message to display on the console, and
-	 * continually reprompts the user with that message until they enter a valid date
-	 * to be returned as the answer to that message.
+	 * continually reprompts the user with that message until they enter a valid
+	 * date to be returned as the answer to that message.
 	 *
 	 * @param msgPrompt - String explaining what information you want from the user.
 	 * @return the answer to the message as LocalDate

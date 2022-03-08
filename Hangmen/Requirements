@@ -1,0 +1,95 @@
+You will be writing an application that will allow a user to play the classic game of hang man.
+Hangman is a game where a user is presented a series of blanks to represent the letters in a word.
+The user will type in a letter and all instances of that letter will appear where there was a blank.
+If no letters were revealed, the player loses 1 of their 7 lives. 
+When a player has reached 0 lives, the game is over, and the word is revealed. 
+Should all the letters be revealed before the player loses all of their lives, the game will end as a victory for the player. 
+See the requirements below.
+
+ // wait what??? oh okay i got it.
+translation:
+a program that asks the user to play hangman if yes, then continue and while with multiple rounds. basically ask them to play not play 
+keep score 
+show lives
+and show spaces and letters on the applicaton. 
+
+
+
+This will be done using N-Tier architecture MVC pattern.
+
+ 
+
+1.           Interfaces must be used For the Data layer and IO classes
+	
+	similar stuff to dvd project but less complex. they're testing for advanced knowledge so go big. 
+
+2.           All words will be stored inside of a text file the program will read from.
+			
+			after stored ask if they'd like to input another one until they don't want to anymore?
+
+3.           When a word has been completed successfully, it is deleted from the text file.
+
+		what??? what would u want to add a word and then delete it? This is problematic. I think we should do more. 
+
+4.           Lambda/Streams will be used in all aspects of the program. Each must be commented to detail what it does.
+		
+		gotta use a lambda/stream as much as possible and explain what it does
+		
+
+5.           The code will be commented extremely well
+		
+		easy enough. 
+
+6.           A flow chart must be submitted with the code.
+		
+		Got it. 
+ 
+
+User Story:
+
+ 
+
+1.           As a user, I will see a main menu in which I can select to play a game, or enter a new word into the system.'
+				
+				play, word, or exit
+				
+
+2.           When entering a new word into the system, it must be at least 3 characters, 
+				contain only letters, and must not be already in the text file. 
+			
+			thus unique case insensitive, stored to file, retrieved from file
+			also validation to prevent spaces, characters etc etc etc. cause its WORD not sentance. this isn't hang jepordy.
+		 
+
+3.           As a user, I will select a difficulty when the game begins. Easy (3-5 characters),
+			 Medium (5-7 characters),
+			 Hard (8+ characters) and the program will select 
+			 a word that matches my difficulty choice.
+	
+				what is this?! okay fine... 
+
+4.           As a user, I will be able to see blanks to represent the length of the word.
+				read string and for each letter count it and then for loop to output print_
+				so if string is "fives" it'll out put "_ _ _ _ _"
+				the issue is the for loop for putting the letter in the correct space. best thing to do is store the word in an array
+				then swap position in the outprint. easy enough
+				
+5.           As a user, I will be able to enter letters to play the game.
+		 If the letter exists it will appear in its correct spot in the word
+		 	 and I will continue to see blanks for the other characters yet to be revealed.
+		 	 
+		 	 
+
+6.           As a user, I will be able to see on the screen the letters that I have selected.
+			
+			WHAT IS THIS?! the console is so tiny ur asking for trouble. okay okay... this can be 1/2 ways
+			1) take user input (guessing thats what they want from me.) and save it into arraylist and then output it.
+			
+
+7.           As a user, I will be able to play again after the completion of a round.
+			
+			ask to play again. or exit to main menu
+			
+
+ 
+ 

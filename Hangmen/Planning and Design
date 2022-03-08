@@ -1,0 +1,119 @@
+so similar to the dvd library... i can't copy code.. 
+BUT they expect me to build off student roster. so which is it? so i have to do this 3/4 blind.
+
+it's fine. we know a few things based on past experiences
+
+1) we have app.java
+2) we have the controller.java
+3) we have the DAO's which include the file shenanigans, an exception class which is pointless imo, 
+	and the hangman interface implemented by file shenanigans
+4)we have hte dTo which is just modeling word which has length and thats it. and length is also categorized as easy, medium, hard. 
+	so <5 = ez
+	5-7 = med
+	and 8+ = hard
+5) we have ui stuff which theres is view, userio interface and the userio console implementation.
+
+That much we do know. what do these classes do and how they work in terms of the mvc and what not, little fuzzy. its new knowledge.
+
+lets take a moment and talk about theory and science: 
+
+What is a stream? 
+	well streams aren't the same as the file input and output in java streams. streams are also not twitch. 
+	streams basically aren't data or lists but a fancy packaging and processing of them. or thats the gist i got.
+	the TECHNICAL term according to java:
+	an interface that is A sequence of elements supporting sequential and parallel aggregate operations.
+	
+	which is jargon. lots of garbally gook
+	BUT Stream basically can do various things what we're interested in its comparing functions
+	
+	some methods are interesting... the distinct() method uses Object.equals to compare whats in collection
+	theres count() which returns a long >_> okay...
+	.empty() which allows one ot instantiate an empty stream <_<
+ 	filter( Predicate<? super T> predicate) which compares more things this one i need to test
+ 	limit(long n) does exactly what one things
+ 	lots of information on methods. 
+ 	i have a minor headache with all this jargon. 
+	so lets work on some examples of streams to understand functionality
+	
+	streams are ez. They're not a collection in the typical lay sense, they're more like a garbage sorting facility. 
+	Where the plant can sort the garbage, toss out other stuff into other things, send it back if need be
+	where the garbage itself is composed of lists and arrays (garbage bags and boxes of garbage) but they don't store the garbage or create it.
+	they collect it and process it and send it on to whatever the plant says. 
+	
+lambda expression
+	my personal experience is loop thru list. so upon further reading i can do a lot with lambda expressions :D
+	i didn't know that u can do that where i only have EVER used it for looping thru lists. my understanding was that lambda was just 
+	forEach((x)--> array.push(x)) thats all i've ever known was use it for loops. i thought it was just short hand for lists :D
+	so there's a lot to talk about this.  
+	
+	according to w3schools :
+		A lambda expression is a short block of code which takes in parameters and returns a value. 
+		Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+ 	
+ 	and lambda is parameter -> expression 
+ 	it can be parameters ->{expression} 
+ 	so think of it as a mini method thats not reusable. but my knowledge is its just for iterating thru lists ^_^;; 
+ 	yeah i kinda really dind't know lambda that well :P
+ 	lambda also can be expressed as a ::
+ 	(again i've only known about it for looping lists which is insane!)
+ 	aside not, previous teacher thought i didn't know lambda's but in class he showed the classic for loop with lambdas. 
+ 	and streams well why wouldn't one use streams. Now we don't want to use lambdas and streams for everything-- it does make code harder to read
+ 	sorta. Internet is divided on it. some say all lambda's and streams. others say no. it depends on u. 
+ 	After a year of doing algorithms, my thoughts are "whichever have lowest time complexity" 
+ 	(please don't ask me to calculate time complexity, i'm still weak on the subject despite a year of study and good grades on it.)
+ 	algorithms are way more difficult than lambdas and streams. Its a shame they're not asking for recursion- cause that's an areas i desperately need to bush up on.
+ 	Fun fact, why am I lacking on recursion? simple, Salesforce Governor limits. Recursion is taboo broadly speaking. and time complexity is important in salesforce.
+ 	but theres so many tricks that a dev and deploy to prevent ever having to worry. But yeah. years of salesforce weakened my foundation in recursion.
+ 	I kinda want mThree to help me be a much better dev. 
+ 	
+ 	
+ 
+ 	
+ Lets build the app one 
+ (many hours later)
+ okay so I didn't do that, but I did make all the classes. I did it off the class rosters idea for mvc
+ and lets take a moment to talk about MVC:
+
+	MVC to me, a salesforce developer, is 100% different from that of a java developer. Yes there's over lap, but different beasts. 
+	With that out of the way.
+	the Model component is actually the storage,DAO, and the DTO. 
+		the storage has the file with da words etc and we unmarshall and marshell it. 
+		the DTO talks between the DAO and the controller and the view. dto move data around application
+		the dao is the the one that is responsible for relieving and storing data, here its an interface being implemneted by another class. 
+		there's also an exception class
+		
+	the view is all the view stuff >_> 
+	
+	the controller is the controller XD
+	
+	so things that are "done"
+	DTO, ui, exception is kinda done
+	
+	so we have dao's, ui implementation, and the actual view plus controller.
+	
+	lets do manifest 
+	
+	Manifest tentatively done.
+	exception class filled out a little, its rough
+	 	
+STORE LAMBDA AS A CONSUMER<OBJECT> method name = (x)->{ A method(x);}; to then just plop into streams or foreach method 
+and we can use it for some other things
+		
+ 	wait a tick it says lambdas/streams should be used FOR ALL ASPECTS
+ 	I don't know what that means. but i am guessing if i have a method it must be a stream or a lambda
+ 	
+OMG that was rough. the implementation of ui is technically done.
+but he wants all lambdas/streams
+thus we don't even need that class--however-- i'm doing it for SANITY sake. cause i don't know MVC (java not apex) beyond this style.
+
+
+So after lots of studying and lots of information lambda and streams can go deep. and not going to lie its a little daunting for my smooth brain
+so there's a concept called functional programming with lambda's and streams. 
+everyone on the web seems to rush over it and its just too much too quickly without context so there's a lot lost in translation
+but i suspect i don't need to know this for the scope of this project but is something i can brush up later and NEED TO KNOW for architect. 
+
+after spending way too much time
+i simply don't know how to drop an if/else statement into a lambda. I know its possible in fact i know the basic structure of the lambda, i don't understand funcitonal interfacing
+ie using predicate/comparator/etc etc cause the issue i have is i am replacing it with a lambda... BUT how am i CALLING said lambda or how am i reusing said lambda. 
+and it seems like either A) i make an interface... b) i call on one of the pred defined ones. and everyone on the interwebs is like make a new class. 
+and sure i could, but does that follow MVC paradigm?  
