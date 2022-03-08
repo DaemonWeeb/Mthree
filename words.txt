@@ -1,2 +1,6 @@
-hippocampus::11::
-cat::3::Hard
+cutlass::7::Medium
+corsair::7::Medium
+bat::3::Easy
+please::6::Medium
+bluderbuss::10::Hard
+feces::5::Easy

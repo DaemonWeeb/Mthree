@@ -65,22 +65,12 @@ public class ViewFormUpsideDown {
 	}
 
 	public WhatDoesItMeanToBeAWord addNewWordPrompt() {
-		String title = io.readString("Please give me a word");
 		String difficulty = "";
-		switch (title.length()) {
-		case 1:
-
-			difficulty = "Easy";
-			break;
-		case 2:
-
-			difficulty = "Medium";
-			break;
-		case 3:
-
-			difficulty = "Hard";
-			break;
-		}
+		String title = io.readString("Please give me a word");
+		if(title.length()<3) {difficulty="Easy";}
+		if(title.length()>8) {difficulty="Hard";}
+		if(title.length()>5&&title.length()<=8) {difficulty="Medium";}
+		if(title.length()>=3&&title.length()<=5) {difficulty="Easy";}
 
 		WhatDoesItMeanToBeAWord word = new WhatDoesItMeanToBeAWord(title, title.length(), difficulty);
 		return word;
@@ -100,7 +90,5 @@ public class ViewFormUpsideDown {
 		io.printLnSomething("Let's play again sometime.");
 
 	}
-
-	
 
 }
